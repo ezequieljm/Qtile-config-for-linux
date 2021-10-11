@@ -36,7 +36,7 @@ mod = "mod4"
 terminal = "tilix"
 color = "#ffffff"
 customFont = "JetBrainsMono Nerd Font"
-customSizeFont = 15
+customSizeFont = 12
 arch = ""
 shutdown = "  "
 
@@ -151,24 +151,26 @@ screens = [
             [
                 widget.TextBox(
                     text = arch,
-                    fontsize = 30,
+                    fontsize = 20,
                     padding = 10,
                     foreground = "19bee3"
                 ),
                 widget.GroupBox(
                     active = "#ffffff",
+                    inactive = "#19bee3",
                     highlight_method = "block",
                     highlight_color = ['ff5555', 'ff5555'],
                     block_highlight_text_color = 'ffffff',
                     rounded = False,
                     padding = 10,
                     margin_x = 10,
-                    fontsize = 20,
+                    fontsize = 14,
                     this_current_screen_border = "ff5555"
                 ),
                 widget.Prompt(
                     prompt = "_ ",
-                    fontsize = 20
+                    fontsize = 14,
+                    foreground = "ff5555"
                 ),
                 widget.WindowName(),
                 widget.Chord(
@@ -184,13 +186,13 @@ screens = [
                 widget.CurrentLayout(),
                 widget.QuickExit(
                     default_text = shutdown,
-                    fontsize = 20,
+                    fontsize = 15,
                     padding = 10,
                     countdown_format = "{}"
 
                 ),
             ],
-            35,
+            28,
             background = "#222222",
         ),
     ),
@@ -240,8 +242,8 @@ wmname = "LG3D"
 
 
 autostart = [
-    "xrandr --output HDMI-0 --mode 1920x1080",
-    "feh --bg-fill /home/gorz/Pictures/EP79a_EX4AAYQVM.jpg\ large.jpg"
+    "xrandr --output HDMI-0 --mode 1360x768",
+    "feh --bg-fill $HOME/.config/qtile/Aesthetic-Wallpaper.jpg"
 ]
 
 for command in autostart:
