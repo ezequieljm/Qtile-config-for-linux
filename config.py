@@ -120,7 +120,7 @@ for i in groups:
 
 layouts = [
     # layout.Columns(border_focus_stack=['#d75f5f', '#8f3d3d'], border_width=2),
-    # layout.Max(),
+    layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -130,7 +130,7 @@ layouts = [
         , border_width=2
         , single_border_width=0
         , border_focus = "#19bee3"),
-    # layout.MonadWide(),
+    layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),
@@ -165,7 +165,7 @@ screens = [
                     padding = 10,
                     margin_x = 10,
                     fontsize = 14,
-                    this_current_screen_border = "ff5555"
+                    this_current_screen_border = "#8436e1"
                 ),
                 widget.Prompt(
                     prompt = "_ ",
