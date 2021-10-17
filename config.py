@@ -120,7 +120,6 @@ for i in groups:
 
 layouts = [
     # layout.Columns(border_focus_stack=['#d75f5f', '#8f3d3d'], border_width=2),
-    layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -128,10 +127,11 @@ layouts = [
     layout.MonadTall(
           border_focus_stack=['#19bee3', '#19bee3']
         , border_width=2
-        , single_border_width=0
+        , single_border_width = 0
         , border_focus = "#19bee3"),
     layout.MonadWide(),
-    # layout.RatioTile(),
+    layout.Max(),
+    # layout.RatioTile(single_border_width=0),
     # layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
@@ -144,16 +144,19 @@ widget_defaults = dict(
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
-
+# widget.TextBox(
+#                     text = arch,
+#                     fontsize = 20,
+#                     padding = 10,
+#                     foreground = "19bee3"
+#                 ),
 screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.TextBox(
-                    text = arch,
-                    fontsize = 20,
-                    padding = 10,
-                    foreground = "19bee3"
+                widget.Image(
+                    filename = "~/.config/qtile/xero.png",
+                    margin_x = 8
                 ),
                 widget.GroupBox(
                     active = "#ffffff",
